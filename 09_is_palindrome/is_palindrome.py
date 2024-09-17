@@ -21,3 +21,10 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    phrase_init = phrase.replace(' ', '').strip().lower()
+    phrase_reversed = phrase_init[::-1]
+    
+    if phrase_init == phrase_reversed:
+        return True
+    else:
+        return False
