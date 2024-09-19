@@ -16,3 +16,15 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
+
+    if True in [True if hobby in b[2] else False for hobby in a[2]]:
+        return True
+    else:
+        return False
+    
+
+
+
+elmo = ('Elmo', 5, ['hugging', 'being nice'])
+sauron = ('Sauron', 5000, ['killing hobbits', 'chess'])
+gandalf = ('Gandalf', 10000, ['waving wands', 'chess'])
