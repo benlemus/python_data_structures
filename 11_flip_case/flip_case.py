@@ -26,5 +26,14 @@ def flip_case(phrase, to_swap):
     
     return ''.join(new_phrase)
 
+'''    
+    # Determine the lower and upper case versions of the character to swap
+    to_swap = to_swap.lower()
     
+    # Create a new string where the case is flipped for the desired character
+    return ''.join(
+        [char.swapcase() if char.lower() == to_swap else char for char in phrase]
+    )
+'''
+
     
