@@ -26,16 +26,16 @@ def sum_pairs(nums, goal):
     # if not true, moves on
     # but all tups need to be doing this check simultaneously
 
+    tried = set()
+
     for num in nums:
-        lst = tuple(nums[nums.index(num)::])
-        print(lst)
-        
-    for item in lst:
-            print(f'{num} + {item}')
-            if num + item == goal:
-                return (num, item)
-            else:
-                 return ()
+        num_needed = goal - num
+        print(tried)
+        print(num_needed)
+        if num_needed in tried:
+            return (num_needed, num)
+        tried.add(num)
+    return ()
         
     
 
