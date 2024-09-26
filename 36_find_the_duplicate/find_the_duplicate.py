@@ -12,4 +12,15 @@ def find_the_duplicate(nums):
 
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
-    """
+    """ 
+
+    for num in nums:
+        num_removed = nums.copy()
+
+        num_removed.remove(num)
+        if num in num_removed:
+            return num
+    return None
+
+        
+
